@@ -108,7 +108,7 @@
                         android:layout_marginStart="10sp"
                         android:layout_marginTop="20sp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Dr. Floyd Wess " />
+                        android:text="Dr. Kyle " />
 
                     <TextView
                         android:id="@+id/txtSpesDoctor"
@@ -143,7 +143,7 @@
                         android:layout_weight="1"
                         android:background="#FFFFFF"
                         android:backgroundTint="#FDFDFD"
-                        android:progressBackgroundTint="#FF6E40" />
+                        android:progressBackgroundTint="#009688" />
 
                     <TextView
                         android:id="@+id/txtJumlahRating"
@@ -181,19 +181,19 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txtDDate"
+                    android:id="@+id/txtDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="28 March, 2023"
+                    android:text="28 October, 2023"
                     android:textColor="#ABA7A7" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="200sp"
+                android:layout_marginLeft="220sp"
                 android:orientation="vertical">
 
                 <TextView
@@ -207,7 +207,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txtDTime"
+                    android:id="@+id/txtTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
@@ -229,13 +229,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtNamaDoctors"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10sp"
                     android:layout_marginTop="20sp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Location:" />
+                    android:text="Location:"
+                    android:textSize="20sp" />
 
                 <TextView
 
@@ -254,13 +254,13 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="284dp"
+                android:layout_width="294dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtfamily"
-                    android:layout_width="278dp"
+                    android:layout_width="269dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10sp"
                     android:layout_marginTop="40sp"
@@ -269,7 +269,7 @@
 
                 <TextView
                     android:id="@+id/txthome"
-                    android:layout_width="278dp"
+                    android:layout_width="271dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10sp"
                     android:text="Medical College"
@@ -294,7 +294,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="50sp"
             android:backgroundTint="#3DCC8F"
             android:text="Go to payment" />
 

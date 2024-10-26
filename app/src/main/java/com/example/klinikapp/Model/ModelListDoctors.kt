@@ -7,5 +7,8 @@ data class ModelListDoctors(
     var JumlahReview : String,
     var JumlahRating : String,
     var date : String,
-    var time : String
+    var time : String,
+    var loc : String,
+    var loc1 : String,
+    var family : String
 )

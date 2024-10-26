@@ -18,6 +18,9 @@ class DetailDoctors : AppCompatActivity() {
     private lateinit var txtDetailJumlahRating: TextView
     private lateinit var txtDetaiDate: TextView
     private lateinit var txtDetailTime: TextView
+    private lateinit var txtDetailloc: TextView
+    private lateinit var txtDetailloc1: TextView
+    private lateinit var txtDetailfamily: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +33,36 @@ class DetailDoctors : AppCompatActivity() {
         txtDetailJumlahReview = findViewById(R.id.txtReviewDoctor)
         detailRating = findViewById(R.id.rating)
         txtDetailJumlahRating = findViewById(R.id.txtJumlahRating)
-        txtDetailTime = findViewById(R.id.txtDTime)
-        txtDetaiDate = findViewById(R.id.txtDDate)
+        txtDetailTime = findViewById(R.id.txtTime)
+        txtDetaiDate = findViewById(R.id.txtDate)
+        txtDetailloc = findViewById(R.id.txtloc)
+        txtDetailloc1 = findViewById(R.id.txtloc1)
+        txtDetailfamily = findViewById(R.id.txtfamily)
 
+        //get data
+        val imgDoctor = intent.getIntExtra("Image Doctor", 0)
+        val namaDoctor = intent.getStringExtra("Nama Doctor")
+        val spesDoctor = intent.getStringExtra("Spes Doctor")
+        val jumlahReview = intent.getStringExtra("Jumlah Review")
+        val jumlahRating = intent.getStringExtra("Jumlah Rating")
+        val date = intent.getStringExtra("Date")
+        val time = intent.getStringExtra("Time")
+        val loc = intent.getStringExtra("loc")
+        val loc1 = intent.getStringExtra("loc1"
+        )
+        val family = intent.getStringExtra("family")
+
+        //set data ke widget
+        imageDetailDoctor.setImageResource(imgDoctor)
+        txtDetailNamaDoctor.setText(namaDoctor)
+        txtDetailSpesDoctor.setText(spesDoctor)
+        txtDetailJumlahReview.setText(jumlahReview)
+        txtDetailJumlahRating.setText(jumlahRating)
+        txtDetailTime.setText(time)
+        txtDetaiDate.setText(date)
+        txtDetailloc.setText(loc)
+        txtDetailloc1.setText(loc1)
+        txtDetailfamily.setText(family)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

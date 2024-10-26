@@ -16,7 +16,7 @@ import com.example.klinikapp.R
 
 class ListDoctorsAdapter(
     private val itemDoctorsList: List<ModelListDoctors>,
-    private val context: Context // Pass context to the adapter
+    private val context: Context // Pass the context to the adapter
 ) : RecyclerView.Adapter<ListDoctorsAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,7 +29,10 @@ class ListDoctorsAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val nView = LayoutInflater.from(parent.context).inflate(R.layout.item_list_doctors, parent, false)
+        val nView = LayoutInflater.from(parent.context).inflate(
+            R.layout.item_list_doctors,
+            parent, false
+        )
         return MyViewHolder(nView)
     }
 
@@ -46,6 +49,7 @@ class ListDoctorsAdapter(
         holder.imgItemDoctors.setImageResource(currentItem.ImgDoctor)
 
         holder.cardDoctor.setOnClickListener {
+            // Create intent to navigate to DetailDoctors
             val intent = Intent(context, DetailDoctors::class.java).apply {
                 putExtra("Image Doctor", currentItem.ImgDoctor)
                 putExtra("Nama Doctor", currentItem.NamaDoctor)
@@ -54,9 +58,16 @@ class ListDoctorsAdapter(
                 putExtra("Jumlah Rating", currentItem.JumlahRating)
                 putExtra("Date", currentItem.date)
                 putExtra("Time", currentItem.time)
+                putExtra("loc",currentItem.loc)
+                putExtra("loc1",currentItem.loc1)
+                putExtra("family",currentItem.family)
+
             }
 
+            // Start DetailDoctors activity
             context.startActivity(intent)
+
+            // Show a Toast message
             Toast.makeText(context, currentItem.NamaDoctor, Toast.LENGTH_SHORT).show()
         }
     }
